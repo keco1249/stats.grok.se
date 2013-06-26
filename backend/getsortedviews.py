@@ -26,8 +26,8 @@ LATESTMONTH = "200912"
 def mysqlconn(db=""):
     try:
         conn = MySQLdb.connect(host = "localhost",
-                               user = "wikistats",
-                               passwd = "",
+                               user = "root",
+                               passwd = "root",
                                db = db)
         return conn
     except MySQLdb.Error, e:

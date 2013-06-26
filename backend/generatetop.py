@@ -27,7 +27,7 @@ def mysqlconn(db=""):
     try:
         conn = MySQLdb.connect(host = "localhost",
                                user = "root",
-                               passwd = "",
+                               passwd = "root",
                                db = db)
         return conn
     except MySQLdb.Error, e:
