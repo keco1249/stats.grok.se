@@ -160,7 +160,8 @@ def doloop():
         print "Phase 1: Download"
         try:
             fetchdata()
-        except:
+        except Exception as e: 
+            print e
             print "error fetching data"
             time.sleep(60*15)
             continue
