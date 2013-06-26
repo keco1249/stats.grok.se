@@ -161,6 +161,7 @@ def doloop():
         try:
             fetchdata()
         except:
+            print "error fetching data"
             time.sleep(60*15)
             continue
         print "Phase 2: Process"
