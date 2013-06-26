@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-db_host = ''
-db_user = ''
-db_password=''
+db_host = 'localhost'
+db_user = 'root'
+db_password='root'
 blocked_users = []
 DEBUG = True
 LATESTTOP = "201012"
