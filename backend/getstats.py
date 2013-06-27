@@ -173,6 +173,6 @@ def doloop():
         time.sleep(2*60*60)
         
 if __name__ == "__main__":
-    doloop()
+    load_into_db("pagecounts_20130502")
 
         
