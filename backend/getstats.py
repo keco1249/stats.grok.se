@@ -108,7 +108,8 @@ def aggregate_day(day,files_for_day):
     print "Sort and unpack"
     for i in files_for_day:
         move(i,"tmp/"+i+".gz")
-        os.system("zcat tmp/"+i+".gz | LC_ALL=C sort -S 512M > tmp/"+i)
+        #os.system("zcat tmp/"+i+".gz | LC_ALL=C sort -S 512M > tmp/"+i)
+        os.system("gunzip tmp/"+i+".gz");
         os.remove("tmp/"+i+".gz")
 
     print "Aggregate"
