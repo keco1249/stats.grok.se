@@ -124,7 +124,7 @@ def load_into_db(day):
     cwd = os.getcwd()+"/tmp/"
     
     c.execute("CREATE TABLE IF NOT EXISTS tmp_"+day+"  (project VARCHAR(20) NOT NULL, page VARCHAR(255) NOT NULL, hitcount INT(4) NOT NULL);")
-    c.execute("LOAD DATA INFILE '"+cwd+day+"' INTO TABLE tmp_"+day+";")
+    c.execute("LOAD DATA LOCAL INFILE '"+cwd+day+"' INTO TABLE tmp_"+day+";")
     c.execute("CREATE INDEX "+day+" ON tmp_"+day+" (project,page(32));")
     try:
         c.execute("RENAME TABLE tmp_"+day+" TO "+day+";")
