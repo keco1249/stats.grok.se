@@ -157,14 +157,14 @@ def do_all_downloaded_days():
 
 def doloop():
     while 1:
-        print "Phase 1: Download"
+        """print "Phase 1: Download"
         try:
             fetchdata()
         except Exception as e: 
             print e
             print "error fetching data"
             time.sleep(60*15)
-            continue
+            continue"""
         print "Phase 2: Process"
         do_all_downloaded_days()
         print "Phase 3: Sleep"
